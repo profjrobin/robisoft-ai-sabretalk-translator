@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.collections.ObservableList?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import java.lang.String?>
+
+<AnchorPane minHeight="300.0" minWidth="400.0" xmlns="http://javafx.com/javafx/8.0.45" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.stp.eauth.automator.BrowserDialogController">
+   <children>
+      <VBox alignment="CENTER" layoutX="131.0" layoutY="50.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="4.0" text="Select Browser" />            
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="60.0" spacing="10.0">               
+               <children>                           
+                  <Text strokeType="OUTSIDE" strokeWidth="4.0" text="Browsers:" />
+                  <ComboBox fx:id="cbBrowser" layoutX="15.0" layoutY="33.0" prefWidth="500.0" promptText="Select Browser" HBox.hgrow="ALWAYS">
+                     <items>
+                        <FXCollections fx:factory="observableArrayList">                                          
+                          </FXCollections>
+                     </items>
+                  </ComboBox>
+                  </children>
+               <padding>
+                  <Insets right="15.0" bottom="10.0"/>
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0" spacing="10.0">
+               <children>                  
+                  <Label alignment="CENTER_LEFT" minWidth="50.0" text="Chrome Driver Location" />
+				  <TextField fx:id="tfChrome" HBox.hgrow="ALWAYS" />
+				  <Button mnemonicParsing="false" onAction="#btnChooseChromePath" text="Select" />                    
+               </children>
+               <padding>
+                  <Insets right="15.0" bottom="10.0"/>
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0" spacing="10.0">
+               <children>                  
+                  <Label alignment="CENTER_LEFT" minWidth="50.0" text="Gecko Driver Location" />
+				  <TextField fx:id="tfGecko" HBox.hgrow="ALWAYS" />
+				  <Button mnemonicParsing="false" onAction="#btnChooseGeckoPath" text="Select" />                    
+               </children>
+               <padding>
+                  <Insets right="15.0" bottom="10.0"/>
+               </padding>
+            </HBox>            
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0" spacing="10.0">
+               <children>                  
+                  <Label alignment="CENTER_LEFT" minWidth="50.0" text="Internet Explorer Driver" />
+				  <TextField fx:id="tfExplorer" HBox.hgrow="ALWAYS" />
+				  <Button mnemonicParsing="false" onAction="#btnChooseIEPath" text="Select" />                    
+               </children>
+               <padding>
+                  <Insets right="15.0" bottom="10.0"/>
+               </padding>
+            </HBox>            
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0" spacing="10.0">
+               <children>                  
+                  <Label alignment="CENTER_LEFT" minWidth="50.0" text="Safari Driver Location" />
+				  <TextField fx:id="tfSafari" HBox.hgrow="ALWAYS" />
+				  <Button mnemonicParsing="false" onAction="#btnChooseSafariPath" text="Select" />                    
+               </children>
+               <padding>
+                  <Insets right="15.0" bottom="10.0"/>
+               </padding>
+            </HBox>                       
+            <HBox alignment="BOTTOM_RIGHT"  spacing="5.0">
+               <children>                  
+			      <Button mnemonicParsing="false" onAction="#btnCancelClicked" text="Cancel" />			   
+			      <Button mnemonicParsing="true" onAction="#btnSaveUserClicked" text="_Save" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets right="15.0" bottom="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

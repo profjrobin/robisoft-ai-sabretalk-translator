@@ -90,8 +90,7 @@ public class CommonHelpers {
     public static String getUserInput(String title,String defaultStr) {
     	String tempStr = defaultStr;
     	Stage stage = new Stage();
-    	//showAlertLater(AlertType.INFORMATION,"Confirmation Code: Enter Confo Code");
-
+   
     	Text txtHdr = new Text("Enter Input Below");
     	Label txtLabel = new Label(defaultStr);
     	TextField txtInput = new TextField();
